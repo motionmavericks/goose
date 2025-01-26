@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 =======
 import { Sidebar } from "@/components/ui/sidebar"
+=======
+import { Sidebar } from "../components/sidebar"
+import { SidebarProvider, SidebarInset } from "../components/ui/sidebar"
+>>>>>>> origin/Kelvin
 import { Header } from "@/components/header"
 import { MainContent } from "../components/main-content"
 >>>>>>> origin/Kelvin
 
 export default function ConferenceGallery() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -84,8 +90,19 @@ export default function ConferenceGallery() {
       <div className="flex flex-col overflow-y-auto">
         <Header />
         <MainContent />
+=======
+    <SidebarProvider>
+      <div className="flex">
+        <Sidebar />
+        <SidebarInset className="flex-1">
+          <main className="flex-1">
+            <Header />
+            <MainContent />
+          </main>
+        </SidebarInset>
+>>>>>>> origin/Kelvin
       </div>
-    </div>
+    </SidebarProvider>
   )
 }
 

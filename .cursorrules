@@ -89,6 +89,7 @@
     "devContainer": {
       "enabled": true,
       "description": "Development is conducted within a dev container environment."
-    }
+    },
+    "npm_verbose": true
   }
   
