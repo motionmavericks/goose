@@ -117,6 +117,33 @@ export const mockData = {
         ],
       },
     ],
+    mainStageSessions: [
+      {
+        id: 1,
+        title: "Senate Press Gallery",
+        description: "A view of the Senate press gallery",
+        image: "/senate-press.jpg",
+        time: "10:00 AM"
+      }
+    ],
+    breakoutStreams: [
+      {
+        id: 1,
+        title: "Treasurer Media",
+        description: "The Treasurer and Minister for Finance talking to the media",
+        image: "/treasurer-media.jpg",
+        time: "11:00 AM"
+      }
+    ],
+    interactiveWorkshops: [
+      {
+        id: 1,
+        title: "Workshop 1",
+        description: "Interactive session",
+        image: "/workshop1.jpg",
+        time: "2:00 PM"
+      }
+    ]
   }
   
   
