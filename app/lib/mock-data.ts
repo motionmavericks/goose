@@ -39,25 +39,25 @@ export const mockData = {
           {
             title: "Global Keynote Address",
             description: "Opening Session",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/400/300",
             time: "9:00 AM",
           },
           {
             title: "The State of Sport",
             description: "Macro Trends Panel",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/neo/400/300",
             time: "10:30 AM",
           },
           {
             title: "Capital Investment Trends",
             description: "Financial Insights",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/millie/400/300",
             time: "11:45 AM",
           },
           {
             title: "Women's Sport Evolution",
             description: "Gender Equity in Sports",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/bella/400/300",
             time: "2:00 PM",
           },
         ],
@@ -69,25 +69,25 @@ export const mockData = {
           {
             title: "Commercial & Revenue",
             description: "Monetization Strategies",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/neo_2/400/300",
             time: "9:30 AM",
           },
           {
             title: "Brands & Marketing",
             description: "Engaging Audiences",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/millie_neo/400/300",
             time: "11:00 AM",
           },
           {
             title: "Fan Experience",
             description: "Enhancing Engagement",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/neo_banana/400/300",
             time: "2:30 PM",
           },
           {
             title: "Emerging Technology",
             description: "Innovation in Sports",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/g/400/300",
             time: "4:00 PM",
           },
         ],
@@ -99,51 +99,24 @@ export const mockData = {
           {
             title: "Sustainability in Sports",
             description: "Green Initiatives",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/400/300?fit=contain&position=center",
             time: "10:00 AM",
           },
           {
             title: "Diversity & Inclusion",
             description: "Building Inclusive Sports",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/neo/400/300?fit=contain&position=center",
             time: "1:30 PM",
           },
           {
             title: "Ethics & Integrity",
             description: "Maintaining Sport Values",
-            image: "/placeholder.svg?height=400&width=400",
+            image: "https://placecats.com/bella/400/300?fit=contain&position=center",
             time: "3:30 PM",
           },
         ],
       },
     ],
-    mainStageSessions: [
-      {
-        id: 1,
-        title: "Senate Press Gallery",
-        description: "A view of the Senate press gallery",
-        image: "/senate-press.jpg",
-        time: "10:00 AM"
-      }
-    ],
-    breakoutStreams: [
-      {
-        id: 1,
-        title: "Treasurer Media",
-        description: "The Treasurer and Minister for Finance talking to the media",
-        image: "/treasurer-media.jpg",
-        time: "11:00 AM"
-      }
-    ],
-    interactiveWorkshops: [
-      {
-        id: 1,
-        title: "Workshop 1",
-        description: "Interactive session",
-        image: "/workshop1.jpg",
-        time: "2:00 PM"
-      }
-    ]
   }
   
   

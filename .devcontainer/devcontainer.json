@@ -19,6 +19,7 @@
 		}
 	},
 	"postCreateCommand": "test -f package.json || npm init -y && npm install",
+	"postStartCommand": "npm list -g shadcn-ui || npm install -g shadcn-ui@latest",
 	"waitFor": "postCreateCommand",
 	"remoteEnv": {
 		"NODE_ENV": "development"

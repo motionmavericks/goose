@@ -1,26 +1,15 @@
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { PlusCircle } from "lucide-react"
-import { mockData } from "@/lib/mock-data"
+import { Sidebar } from "@/components/sidebar"
+import { Header } from "@/components/header"
+import { MainContent } from "@/components/main-content"
 
-export default function Page(): React.ReactNode {
+export default function ConferenceGallery() {
   return (
-    <div className="min-h-screen">
-      <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b px-6">
-        <Tabs defaultValue="day1" className="flex-1">
-          <TabsList className="grid w-full max-w-[400px] grid-cols-3">
-            {mockData.tabItems.map((tab) => (
-              <TabsTrigger key={tab.value} value={tab.value}>
-                {tab.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
-        <Button className="ml-auto">
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Upload Photos
-        </Button>
-      </header>
+    <div className="grid lg:grid-cols-[240px_1fr] h-screen bg-background">
+      <Sidebar />
+      <div className="flex flex-col overflow-y-auto">
+        <Header />
+        <MainContent />
+      </div>
     </div>
   )
 }
