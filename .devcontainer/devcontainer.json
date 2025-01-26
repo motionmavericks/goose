@@ -27,7 +27,7 @@
 		"CHOKIDAR_USEPOLLING": "true"
 	},
 	"mounts": [
-		"source=${localWorkspaceFolder}/node_modules,target=/workspaces/goose/app/node_modules,type=volume"
+		"source=goose-node-modules,target=/workspaces/goose/app/node_modules,type=volume"
 	],
 	"updateRemoteUserUID": true
 }

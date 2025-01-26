@@ -82,6 +82,11 @@
         "description": "Always use verbose mode when executing commands to provide detailed output and logging.",
         "action": "enable_verbose_mode",
         "verbose": true
+      },
+      {
+        "id": "never-modify-node-modules",
+        "description": "Never modify or delete node_modules in the root directory. Only manage node_modules within the Next.js app directory at /app.",
+        "action": "enforce_node_modules_management"
       }
     ],
     "dependencies": {

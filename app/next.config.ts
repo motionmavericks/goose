@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     ],
   },
   webpack: (config, { isServer }) => {
-    // Fixes hot reloading in dev container
+    // Add hot reload support
     if (!isServer) {
       config.watchOptions = {
         poll: 1000,
