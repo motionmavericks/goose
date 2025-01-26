@@ -1,4 +1,3 @@
-import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -17,8 +16,8 @@ export function PhotoCard({ title, description, image, time }: PhotoCardProps) {
           src={image || "/placeholder.svg"}
           alt={title}
           width={400}
-          height={400}
-          className="aspect-square h-auto w-full object-cover transition-all hover:scale-105"
+          height={300}
+          className="h-auto w-full object-cover transition-all hover:scale-105"
         />
       </div>
       <div className="space-y-1">

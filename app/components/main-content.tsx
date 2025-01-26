@@ -1,6 +1,5 @@
-import React from "react"
 import { ScrollArea } from "../components/ui/scroll-area"
-import { PhotoCard } from "./photo-card"
+import { PhotoCard } from "../components/photo-card"
 import { mockData } from "../lib/mock-data"
 
 export function MainContent() {
