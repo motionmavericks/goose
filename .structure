@@ -1,46 +1,78 @@
 # Goose Project Structure
 # Last updated: 2024-01-26
+# Purpose: Next.js 15+ application with shadcn/ui and Tailwind CSS in a dev container
 
-📁 .devcontainer/              # Dev container configuration
+#------------------------------------------------------------------------------
+# Root Level Configuration
+#------------------------------------------------------------------------------
+📁 .devcontainer/              # Dev container configuration and settings
+📁 .git/                       # Git version control system data
+.cursorrules                   # Project rules and development conventions
+.gitignore                     # Git ignored files and directories
+.structure                     # Project structure documentation (this file)
+
+#------------------------------------------------------------------------------
+# Next.js Application (/app)
+#------------------------------------------------------------------------------
 📁 app/                        # Next.js application root
-├── 📁 app/                    # Next.js App Router directory
-│   ├── page.tsx               # Home page component
-│   ├── layout.tsx             # Root layout component
-│   ├── globals.css            # Global styles
+│
+├── 📁 app/                    # App Router (Next.js 13+ file-system based router)
+│   ├── layout.tsx             # Root layout with global providers and structure
+│   ├── page.tsx               # Home page component (/)
+│   ├── globals.css            # Global styles and Tailwind directives
 │   ├── favicon.ico            # Site favicon
-│   ├── 📁 about/             # About page route
-│   ├── 📁 contact/           # Contact page route
-│   └── 📁 projects/          # Projects page route
+│   │
+│   ├── 📁 about/             # About page route (/about)
+│   ├── 📁 contact/           # Contact page route (/contact)
+│   └── 📁 projects/          # Projects page route (/projects)
 │
-├── 📁 components/            # React components
-│   └── 📁 ui/               # shadcn/ui components
+├── 📁 components/            # Reusable React components
+│   ├── 📁 ui/               # shadcn/ui components (unmodified)
+│   └── [other components]    # Custom application components
 │
-├── 📁 lib/                   # Utility functions and shared code
+├── 📁 lib/                   # Utility functions, helpers, and shared code
 ├── 📁 hooks/                 # Custom React hooks
-├── 📁 public/                # Static assets
+├── 📁 public/                # Static assets (images, fonts, etc.)
 │
-├── package.json              # Project dependencies and scripts
+#------------------------------------------------------------------------------
+# Configuration Files
+#------------------------------------------------------------------------------
+├── package.json              # Dependencies and scripts
 ├── package-lock.json         # Locked dependency versions
 ├── next.config.ts            # Next.js configuration
 ├── tailwind.config.ts        # Tailwind CSS configuration
-├── postcss.config.mjs        # PostCSS configuration
-├── eslint.config.mjs         # ESLint configuration
-├── tsconfig.json             # TypeScript configuration
+├── postcss.config.mjs        # PostCSS plugins configuration
+├── eslint.config.mjs         # ESLint rules and settings
+├── tsconfig.json             # TypeScript compiler configuration
 ├── components.json           # shadcn/ui components configuration
 ├── next-env.d.ts            # Next.js TypeScript declarations
 └── .env                     # Environment variables
 
-📁 .git/                      # Git repository data
-.cursorrules                  # Project rules and conventions
-.gitignore                    # Git ignore patterns
-.structure                    # This file - Project structure documentation
-
-# Notes:
-# - Project uses Next.js 15+ with App Router
-# - Styling is handled through Tailwind CSS
-# - UI components are based on shadcn/ui library
-# - TypeScript is configured in strict mode
-# - Development occurs within a dev container environment
-# - All development must be conducted within the dev container
-# - Component files use PascalCase naming convention
-# - Variables and functions use camelCase naming convention 
+#------------------------------------------------------------------------------
+# Project Conventions and Rules
+#------------------------------------------------------------------------------
+# Development Environment:
+# - All development must occur within the dev container
+# - No host machine package installations allowed
+# - TypeScript strict mode enforced
+# - Prettier used for code formatting
+#
+# Naming Conventions:
+# - Components: PascalCase (e.g., Header.tsx, UserProfile.tsx)
+# - Functions: camelCase (e.g., getUserData, fetchPosts)
+# - Variables: camelCase (e.g., userData, isLoading)
+#
+# Component Development:
+# - Functional components with React hooks
+# - shadcn/ui components kept unmodified in components/ui/
+# - Custom components in appropriate subdirectories
+#
+# Styling:
+# - Tailwind CSS for all styling
+# - No inline styles
+# - Global styles in globals.css
+#
+# Version Control:
+# - Dependency versions must remain unchanged
+# - Next.js version: 15.x
+# - React version: 19.x 
