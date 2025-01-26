@@ -1,16 +1,21 @@
-import { Sidebar } from "@/components/ui/sidebar"
+import { Sidebar } from "../components/sidebar"
+import { SidebarProvider, SidebarInset } from "../components/ui/sidebar"
 import { Header } from "@/components/header"
 import { MainContent } from "../components/main-content"
 
 export default function ConferenceGallery() {
   return (
-    <div className="grid lg:grid-cols-[240px_1fr] h-screen bg-background">
-      <Sidebar />
-      <div className="flex flex-col overflow-y-auto">
-        <Header />
-        <MainContent />
+    <SidebarProvider>
+      <div className="flex">
+        <Sidebar />
+        <SidebarInset className="flex-1">
+          <main className="flex-1">
+            <Header />
+            <MainContent />
+          </main>
+        </SidebarInset>
       </div>
-    </div>
+    </SidebarProvider>
   )
 }
 
