@@ -73,9 +73,9 @@
       },
       {
         "id": "maintain-structure-file",
-        "description": "Keep an updated '.structure' file in the '/app' directory that reflects the full folder and file structure, including comments about the latest updates.",
+        "description": "Keep an updated '.structure' file in the nextjs root directory that reflects the full folder and file structure, including comments about the latest updates.",
         "action": "maintain_structure_file",
-        "path": "/app/.structure"
+        "path": "/.structure"
       }
     ],
     "dependencies": {
