@@ -1,7 +1,7 @@
 import { Sidebar } from "@/components/sidebar"
 import { Header } from "@/components/header"
 import { MainContent } from "@/components/main-content"
-
+// code change to commit and push to github
 export default function ConferenceGallery() {
   return (
     <div className="grid lg:grid-cols-[240px_1fr] h-screen bg-background">
@@ -13,4 +13,3 @@ export default function ConferenceGallery() {
     </div>
   )
 }
-
