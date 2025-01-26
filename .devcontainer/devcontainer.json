@@ -22,6 +22,12 @@
 	"postStartCommand": "npm list -g shadcn-ui || npm install -g shadcn-ui@latest",
 	"waitFor": "postCreateCommand",
 	"remoteEnv": {
-		"NODE_ENV": "development"
-	}
+		"NODE_ENV": "development",
+		"WATCHPACK_POLLING": "true",
+		"CHOKIDAR_USEPOLLING": "true"
+	},
+	"mounts": [
+		"source=${localWorkspaceFolder}/node_modules,target=/workspaces/goose/app/node_modules,type=volume"
+	],
+	"updateRemoteUserUID": true
 }
