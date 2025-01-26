@@ -1,17 +1,23 @@
 import React from "react"
 import Image from "next/image"
-import Link from "next/link"
 
 interface PhotoCardProps {
   title: string
   description: string
   image: string
   time: string
+  onClick?: () => void
 }
 
-export function PhotoCard({ title, description, image, time }: PhotoCardProps) {
+export function PhotoCard({ title, description, image, time, onClick }: PhotoCardProps) {
   return (
-    <Link href="#" className="group space-y-3">
+    <div 
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => e.key === 'Enter' && onClick?.()}
+      className="group space-y-3 cursor-pointer"
+    >
       <div className="overflow-hidden rounded-md">
         <Image
           src={image || "/placeholder.svg"}
@@ -26,7 +32,7 @@ export function PhotoCard({ title, description, image, time }: PhotoCardProps) {
         <p className="text-xs text-muted-foreground">{description}</p>
         <p className="text-xs text-muted-foreground">{time}</p>
       </div>
-    </Link>
+    </div>
   )
 }
 

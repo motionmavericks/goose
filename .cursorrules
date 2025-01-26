@@ -76,11 +76,17 @@
         "description": "Keep an updated '.structure' file in the nextjs root directory that reflects the full folder and file structure, including comments about the latest updates.",
         "action": "maintain_structure_file",
         "path": "/.structure"
+      },
+      {
+        "id": "enable-verbose-mode",
+        "description": "Always use verbose mode when executing commands to provide detailed output and logging.",
+        "action": "enable_verbose_mode",
+        "verbose": true
       }
     ],
     "dependencies": {
-      "next": "15.x",
-      "react": "19.x",
+      "next": "15.0.0",
+      "react": "18.2.0",
       "shadcn/ui": "latest",
       "tailwindcss": "latest",
       "typescript": "latest",

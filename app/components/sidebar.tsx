@@ -1,12 +1,17 @@
 import React from "react"
 import { Button } from "./ui/button"
-import { Calendar, ImageIcon, Users, Star } from "lucide-react"
+import { Calendar, ImageIcon, Users, Star, Menu } from "lucide-react"
 import { mockData } from "../lib/mock-data"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
 export function Sidebar() {
   return (
     <Sheet>
+      <SheetTrigger asChild>
+        <Button variant="ghost" size="icon">
+          <Menu className="h-5 w-5" />
+        </Button>
+      </SheetTrigger>
       <SheetContent side="left" className="w-64 p-0">
         <div className="flex flex-col gap-6 p-4 h-screen overflow-y-auto">
           <div className="space-y-4">
