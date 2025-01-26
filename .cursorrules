@@ -1,0 +1,94 @@
+{
+    "project": {
+      "name": "Goose",
+      "description": "A Next.js 15+ application utilizing shadcn/ui and Tailwind CSS, developed within a dev container environment."
+    },
+    "instructions": [
+      {
+        "id": "preserve-dependency-versions",
+        "description": "Ensure that the Next.js version and all other dependency versions remain unchanged.",
+        "action": "prevent_version_change"
+      },
+      {
+        "id": "enforce-ui-components-structure",
+        "description": "Maintain all shadcn/ui components exclusively within the 'components/ui' directory without modifications.",
+        "action": "enforce_directory_structure",
+        "path": "/app/components/ui"
+      },
+      {
+        "id": "restrict-host-installations",
+        "description": "Prohibit the installation of any packages or dependencies on the host machine; all development should occur within the dev container.",
+        "action": "restrict_host_installations"
+      },
+      {
+        "id": "set-working-directory",
+        "description": "Conduct all operations within the '/app' directory, where the Next.js application is located.",
+        "action": "set_working_directory",
+        "path": "/app"
+      },
+      {
+        "id": "enforce-typescript-strict-mode",
+        "description": "Ensure TypeScript is used in strict mode to maintain type safety across the project.",
+        "action": "enforce_typescript_strict_mode"
+      },
+      {
+        "id": "enforce-code-formatting",
+        "description": "Apply Prettier for consistent code formatting across the project.",
+        "action": "apply_prettier_formatting"
+      },
+      {
+        "id": "enforce-naming-conventions",
+        "description": "Use PascalCase for React component filenames and camelCase for variables and functions.",
+        "action": "enforce_naming_conventions",
+        "conventions": {
+          "components": "PascalCase",
+          "variables": "camelCase",
+          "functions": "camelCase"
+        }
+      },
+      {
+        "id": "prefer-functional-components",
+        "description": "Utilize functional components and React hooks for component development.",
+        "action": "prefer_functional_components"
+      },
+      {
+        "id": "use-tailwind-for-styling",
+        "description": "Employ Tailwind CSS for styling and avoid inline styles.",
+        "action": "use_tailwind_css"
+      },
+      {
+        "id": "maintain-directory-structure",
+        "description": "Adhere to the defined directory structure, ensuring components are organized appropriately.",
+        "action": "enforce_directory_structure",
+        "structure": {
+          "components": "/app/components",
+          "pages": "/app/pages",
+          "styles": "/app/styles"
+        }
+      },
+      {
+        "id": "provide-code-explanations",
+        "description": "Include comments and explanations for complex code implementations to enhance readability.",
+        "action": "add_code_comments"
+      },
+      {
+        "id": "maintain-structure-file",
+        "description": "Keep an updated '.structure' file in the nextjs root directory that reflects the full folder and file structure, including comments about the latest updates.",
+        "action": "maintain_structure_file",
+        "path": "/.structure"
+      }
+    ],
+    "dependencies": {
+      "next": "15.x",
+      "react": "19.x",
+      "shadcn/ui": "latest",
+      "tailwindcss": "latest",
+      "typescript": "latest",
+      "prettier": "latest"
+    },
+    "devContainer": {
+      "enabled": true,
+      "description": "Development is conducted within a dev container environment."
+    }
+  }
+  

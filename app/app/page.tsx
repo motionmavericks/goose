@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+=======
+import { Sidebar } from "@/components/ui/sidebar"
+import { Header } from "@/components/header"
+import { MainContent } from "../components/main-content"
+>>>>>>> origin/Kelvin
 
-export default function Home() {
+export default function ConferenceGallery() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center bg-gradient-to-b from-primary/20 to-background">
@@ -71,3 +78,15 @@ export default function Home() {
     </div>
   )
 }
+=======
+    <div className="grid lg:grid-cols-[240px_1fr] h-screen bg-background">
+      <Sidebar />
+      <div className="flex flex-col overflow-y-auto">
+        <Header />
+        <MainContent />
+      </div>
+    </div>
+  )
+}
+
+>>>>>>> origin/Kelvin
