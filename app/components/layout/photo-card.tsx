@@ -66,7 +66,14 @@ export function PhotoCard({
         </div>
       </div>
       {showInfo && (
-        <div className="flex flex-wrap gap-2 mt-3">
+        <div 
+          className={cn(
+            "flex flex-wrap gap-2 mt-3",
+            "transition-all duration-300 ease-in-out",
+            showInfo ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none",
+            "absolute"
+          )}
+        >
           <Badge variant="secondary">
             {photo.name}
           </Badge>
