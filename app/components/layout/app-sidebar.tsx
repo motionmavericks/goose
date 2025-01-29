@@ -13,12 +13,15 @@ import {
   Settings2,
   SquareTerminal,
 } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 import { NavMain } from "./nav-main"
 import { NavProjects } from "./nav-projects"
 import { NavUser } from "./nav-user"
 import { TeamSwitcher } from "./team-switcher"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "@/components/ui/sidebar"
+import { PhotosControls } from "@/components/layout/photos-controls"
+import { usePhotosStore } from "@/lib/photos-store"
 
 // This is sample data.
 const data = {
@@ -151,6 +154,14 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname()
+  const { size, setSize, isResizing, setIsResizing, columnCount } = usePhotosStore()
+
+  const handleSizeChange = (newSize: number) => {
+    setSize(newSize)
+    setIsResizing(true)
+  }
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
