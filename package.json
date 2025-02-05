@@ -1,0 +1,24 @@
+{
+  "name": "goose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motionmavericks/goose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/motionmavericks/goose/issues"
+  },
+  "homepage": "https://github.com/motionmavericks/goose#readme",
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "framer-motion": "^12.0.6"
+  }
+}

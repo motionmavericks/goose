@@ -1,0 +1,33 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Node.js Development Environment",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "node",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "latest"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			]
+		}
+	},
+	"postCreateCommand": "test -f package.json || npm init -y && npm install",
+	"postStartCommand": "npm list -g shadcn-ui || npm install -g shadcn-ui@latest",
+	"waitFor": "postCreateCommand",
+	"remoteEnv": {
+		"NODE_ENV": "development",
+		"WATCHPACK_POLLING": "true",
+		"CHOKIDAR_USEPOLLING": "true"
+	},
+	"mounts": [
+		"source=goose-node-modules,target=/workspaces/goose/app/node_modules,type=volume"
+	],
+	"updateRemoteUserUID": true
+}

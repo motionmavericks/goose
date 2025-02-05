@@ -1,0 +1,4 @@
+There's two applications, one is in "dev" and the other is in "goose".
+
+Each have their own .cursorrules file you need to read depending which you are working on.
+
